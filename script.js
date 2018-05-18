@@ -1,21 +1,13 @@
-var add = false;
-var rm = false;
 var tabela = document.getElementById('tabela-diario');
 
 
 
 function adicionarAluno() {
-    if(!add) {
-        document.getElementById('add-aluno').style.display = 'block';
-        add = true;
-    }
+    document.getElementById('add-aluno').style.display = 'block';
 }
 
 function removerAluno() {
-    if(!rm) {
-        document.getElementById('rm-aluno').style.display = 'block';
-        add = true;
-    }
+    document.getElementById('rm-aluno').style.display = 'block';
 }
 document.getElementById('submit-form').onclick = function(e) {
     
@@ -31,6 +23,7 @@ document.getElementById('submit-form').onclick = function(e) {
 
     celNumero.innerHTML = numero;
     celNumero.classList.add('td-2');
+    celNumero.classList.add('numero');
 
     celMatricula.innerHTML = matricula;
     celMatricula.classList.add('td-5');
@@ -54,7 +47,6 @@ document.getElementById('submit-form').onclick = function(e) {
     row.insertCell(13).innerHTML = '-';
 
     document.getElementById('add-aluno').style.display = 'none';
-    add = false;
 
     e.preventDefault();
 }
@@ -63,20 +55,23 @@ document.getElementById('submit-form-rm').onclick = function(e) {
 
     var mat = document.getElementById('matricula-aluno-rm').value;
     var linhas = document.getElementsByTagName('tr');
-
     for(i = 4; i < linhas.length; i++ ) {
-        console.log(linhas[i].getElementsByClassName('matricula'))
-        if(linhas[i].getElementsByClassName('matricula').value === mat) {
-
+        if(linhas[i].getElementsByClassName('matricula')[0].innerHTML === mat) {
             document.getElementById('tabela-diario').deleteRow(i);
-            console.log('dasd')
+
+            //este loop numera as colunas novamente apos uma remoção
+            var numero = 1;
+            for(j = 4; j < linhas.length; j++) {
+                console.log(linhas[j]);
+                linhas[j].getElementsByClassName('numero')[0].innerHTML = numero;
+                numero++;
+            }
 
         }
 
     }
 
-
-
+    document.getElementById('rm-aluno').style.display = 'none';
     e.preventDefault();
 
 }
