@@ -59,3 +59,8 @@
 #add-aluno input {
     width: 100%;
 }
+
+#rm-aluno {
+    padding: 5px;
+    display: none;
+}

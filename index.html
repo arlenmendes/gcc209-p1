@@ -39,7 +39,7 @@
                 </tr>
                 <tr>
                     <td class="td-2" colspan="1">Nº</td>
-                    <td colspan="2" class="td-5">Matricula</td>
+                    <td colspan="2" class="td-5 matricula">Matricula</td>
                     <td colspan="3">Nome</td>
                     <td colspan="1">T</td>
                     <td colspan="1">P</td>
@@ -69,15 +69,29 @@
             </table>
             <div class="acoes">
                 <div id="add-aluno">
+
                     <form id="form-aluno">
                         <input type="text" id="nome-aluno" placeholder="Nome">
                         <hr>
                         <input type="text" id="matricula-aluno" placeholder="Matrícula">
                         <input type="submit" id="submit-form" value="Salvar">
                     </form>
+
                 </div>
+
+                <div id="rm-aluno">
+
+                    <form id="form-aluno-rm">
+                        <input type="text" id="matricula-aluno-rm" placeholder="Matricula">
+                        <input type="submit" id="submit-form-rm" value="Remover">
+
+                    </form>
+
+                </div>
+
                 <button onclick="adicionarAluno()"> Adicionar Aluno</button>
-                <button> Remover Aluno</button>
+                <button onclick="removerAluno()"> Remover Aluno</button>
+
             </div>
             <div class="obs">
                 <label for="obs">Obs:</label>
