@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Diário de Classe</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Diário de Classe</h1>
+            <h3>Não é documento - Disciplina em aberto</h3>
+        </header>
+        <main>
+            <table class="tabela-diario" id="tabela-diario">
+                <tr>
+                    <td class="alinhar-esquerda" colspan="6">GCC209 - Programação Web</td>
+                    <td rowspan="3" colspan="2">Faltas</td>
+                    <td colspan="6">Pesos</td>
+                    <td rowspan="4" class="td-5">NOTA FINAL</td>
+                    <td rowspan="4" class="td-5">NOTA FINAL REC.</td>
+                    <td rowspan="4" class="td-5">CONCEITO (MOTIVO)</td>
+                </tr>
+                <tr>
+                    <td class="alinhar-esquerda" colspan="6">Turma: 14A    Semestre: 2018/1</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="alinhar-esquerda" colspan="6">Carga Horária Teórica: 0 - Carga Horária Pratica: 68</td>
+                    <td colspan="6">NOTAS</td>
+                </tr>
+                <tr>
+                    <td class="td-2" colspan="1">Nº</td>
+                    <td colspan="2" class="td-5">Matricula</td>
+                    <td colspan="3">Nome</td>
+                    <td colspan="1">T</td>
+                    <td colspan="1">P</td>
+                    <td colspan="1">1º</td>
+                    <td colspan="1">2º</td>
+                    <td colspan="1">3º</td>
+                    <td colspan="1">4º</td>
+                    <td colspan="1">5º</td>
+                    <td colspan="1">6º</td>
+                </tr>
+                <tr>
+                    <td class="td-2">1</td>
+                    <td colspan="2" class="td-5">201520121</td>
+                    <td colspan="3" class="alinhar-esquerda">Arlen Mateus Mendes Silva Pinto</td>
+                    <td colspan="1">0</td>
+                    <td colspan="1">0</td>
+                    <td colspan="1">-</td>
+                    <td colspan="1">-</td>
+                    <td colspan="1">-</td>
+                    <td colspan="1">-</td>
+                    <td colspan="1">-</td>
+                    <td colspan="1">-</td>
+                    <td colspan="1">0</td>
+                    <td colspan="1">-</td>
+                    <td colspan="1">-</td>
+                </tr>
+            </table>
+            <div class="acoes">
+                <div id="add-aluno">
+                    <form id="form-aluno">
+                        <input type="text" id="nome-aluno" placeholder="Nome">
+                        <hr>
+                        <input type="text" id="matricula-aluno" placeholder="Matrícula">
+                        <input type="submit" id="submit-form" value="Salvar">
+                    </form>
+                </div>
+                <button onclick="adicionarAluno()"> Adicionar Aluno</button>
+                <button> Remover Aluno</button>
+            </div>
+            <div class="obs">
+                <label for="obs">Obs:</label>
+                <textarea name="obs" id="obs" rows="4"></textarea>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

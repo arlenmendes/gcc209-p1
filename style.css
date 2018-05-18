@@ -1,0 +1,61 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tabela-diario {
+    width: 100%;
+}
+
+.tabela-diario td {
+    border: 1px solid #000000;
+}
+
+.alinhar-esquerda {
+    text-align: left
+}
+
+.td-45 {
+    width: 45%;
+}
+
+.td-35 {
+    width: 35%;
+}
+
+.td-15 {
+    width: 8%;
+}
+
+.td-5 {
+    width: 5.5%;
+}
+
+.td-2 {
+    width: 2.5%;
+}
+
+.acoes {
+    padding: 15px;
+}
+
+.obs {
+    width: 100%;
+    text-align: left;
+}
+
+.obs textarea {
+    width: 100%;
+}
+
+#add-aluno {
+    display: none;
+    margin: 0 auto;
+    width: 50%;
+    padding: 5px;
+}
+
+#add-aluno input {
+    width: 100%;
+}
