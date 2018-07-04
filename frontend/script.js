@@ -167,7 +167,7 @@ function removerAlunoBanco(id) {
     };
 
 
-    request.open("PUT", url + "/alunos");
+    request.open("DELETE", url + "/alunos");
     request.setRequestHeader("Content-Type", "application/json");
     request.send(JSON.stringify({id: id}));
 }

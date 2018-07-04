@@ -31,7 +31,7 @@ switch ($_SERVER["REQUEST_URI"]) {
             echo json_encode($responsta);
             break;
 
-        } else if ($_SERVER['REQUEST_METHOD'] == "PUT") {
+        } else if ($_SERVER['REQUEST_METHOD'] == "DELETE") {
 
             Alunos::remover(file_get_contents('php://input'));
 
